@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;600&display=swap" rel="stylesheet">
+    <script defer src="./scripts/dom.js" type="module"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Morse Translator</title>
+</head>
+
+<body>
+    <form>
+        <h1 id="header">Text to Morse Code</h1>
+        <div class="tooltip">
+            <button id="selectButton">
+                <img class="icon" src="./icons/sortingIcon.png">
+                <span class="tooltiptext">swap input</span>
+            </button>
+        </div>
+        <div id="translator">
+            <div id="input">
+                <p id="inputOption">Text</p>
+                <textarea id="inputText" placeholder="Write your code here"></textarea>
+            </div>
+            <div id="output">
+                <p id="outputOption">Morse</p>
+                <textarea id="outputText" placeholder="Generate to see the result!"></textarea>
+            </div>
+        </div>
+        <div id="errorMessage"></div>
+        <div class="button__container">
+            <button id="clearButton">Clear</button>
+            <button id="submitButton" type="submit">Generate</button>
+            <div class="tooltip">
+                <button id="copyButton">
+                    <img class="icon" src="icons/copyIcon.png" />
+                    <span class="tooltiptext" id="myTooltip">Copy</span>
+                </button>
+            </div>
+        </div>
+        <div id="translateTable">
+            <h1 className="table__header">Morse Code Chart</h1>
+            <div id="tableContents">
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
